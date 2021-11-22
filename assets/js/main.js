@@ -1,0 +1,1 @@
+var rellax=new Rellax('.rellax',{horizontal:false,center:true,vertical:true,});ScrollOut({});
