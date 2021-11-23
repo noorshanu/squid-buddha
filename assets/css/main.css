@@ -1,6 +1,8 @@
 .bg-image {
     background-image: url(../img/Header-01.jpg);
-    height: 90vh;
+    height: auto;
+    width: auto;
+    padding-top: 44%;
     background-size: cover;
     background-position: 60%;
     background-repeat: no-repeat;
@@ -65,11 +67,11 @@
 }
 
 @media(max-width: 801px) {
-    .bg-image {
+   /* .bg-image {
         background-position: 54%;
         background-size: contain;
         height: 26vh;
-    }
+    }*/
 }
 
 @-webkit-keyframes slideUp {
