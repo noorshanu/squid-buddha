@@ -26,6 +26,8 @@
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="stylesheet" href="assets/css/timeTo.css" />
+
+     
     <title>SquidBuddha Club</title>
   </head>
   <body class="antialiased">
@@ -69,7 +71,8 @@
 
 
       
-          <img src="sqid.jpg" style="    height: 90%;
+          <img src="sqid.jpg" style="    height: auto;
+          width: auto;
     margin-left: auto;
    
     margin-right: auto;">
@@ -151,24 +154,29 @@
             "
             data-scroll
           >
-            <input class="w-56 md:w-96" type="text" />
-            <button class="bg-red-600 text-white text-lg py-2 px-4 uppercase">
-              Join our mailing list
+          <form action="insert.php"  method="post" syle="text-align:center">
+            <input class="w-56 md:w-96" type="text" placeholder="Input Your Queries" name="sender" id="sender" required=""/>
+            <button type="submit" class="bg-red-600 text-white text-lg py-2 px-4 uppercase">
+              Submit
             </button>
+                                    
+                               
+                                </form>     
           </div>
           <div class="mt-3 text-white text-sm">
             Copyright &copy; 2021 SQUIDBUDDHA Club
           </div>
-        </div>
+        
+        
       </footer>
     </div>
     <script src="unpkg.com/scroll-out%402.2.12/dist/scroll-out.min.js"></script>
-    <script
+  <!--   <script
       src="cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js"
       integrity="sha512-f5HTYZYTDZelxS7LEQYv8ppMHTZ6JJWglzeQmr0CVTS70vJgaJiIO15ALqI7bhsracojbXkezUIL+35UXwwGrQ=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
-    ></script>
+    ></script> -->
     <script src="assets/js/main.js" defer></script>
     <script src="ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="assets/js/jquery.time-to.min.js"></script>
@@ -186,6 +194,31 @@
         captionSize: 14,
       });
     </script>
+<!--     <script >
+    
+function sendmail() { 
+  var email = $('#sender').val();
+  console.log(email)
+  Email.send({
+    Host : "smtp.elasticemail.com",
+    Username : "paymentme121@gmail.com",
+    Password : "7FDC2B1BCB904E597F125231B98923B55682",
+    To: 'paymentme121@gmail.com',
+    From: 'demo@gmail.com',
+    Subject: "New Subscriber",
+    Body: 'You have new subscriber : ' +email
+  }).then(message => {
+    if (message == 'OK') {
+      window.location.reload('index.html');
+    }
+    else {
+      console.log("not sent")
+    }
+  }
+  );
+}
+
+    </script> -->
   </body>
 
 
